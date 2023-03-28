@@ -24,7 +24,7 @@ private class ChatGPT_CTRLTest {
     static void testMessageGPT() {
         createChatGPT_Config();
         Test.startTest();
-        Test.setMock(HttpCalloutMock.class, new GPTAPI_MockHttpResponse());
+        
         List<String> chatMessages = new List<String>();
         chatMessages.add('What is Salesforce?');
         ChatGPT_CTRL.messageGPT(chatMessages);

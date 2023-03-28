@@ -1,0 +1,3 @@
+MKT_ChatGPT_Config__c-Chat_GPT_Config__cs
+-----
+Nivel 1: La clase MKT_ChatGPT_Constants es una clase pública que almacena constantes utilizadas para interactuar con la API de OpenAI. Contiene valores predeterminados como URL de API, el tipo de contenido, el token de autenticación de una configuración personalizada (Chat_GPT_Config__c), el modelo que se utilizará (text-davinci-003), el valor de temperatura (0.7) y el número máximo de tokens a generar (256). Además, incluye valores constantes de cadena para ayudar a la IA a interactuar como si estuviera en un chat con un usuario en la plataforma Salesforce. Estas constantes son PromptUser, PromptIA y Prompt.
