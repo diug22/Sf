@@ -1,13 +1,3 @@
-Listo
+MKT_ChatGPT_Config__c
 -----
-La clase MKT_ChatGPT_Constants es una clase que contiene constantes utilizadas en otros procesos, probablemente en la comunicación con un API externo (OpenAI's GPT-3). Las constantes son:
-
-1. API: Indica la URL del endpoint al cual se realizarán las llamadas.
-2. ContentType: Representa el tipo de dato representado como 'application/json'.
-3. AuthToken: Obtiene el token de autorización desde la configuración personalizada Chat_GPT_Config__c.
-4. Model: El modelo de GPT-3 utilizado, en este caso 'text-davinci-003'.
-5. Temperature: Controla la aleatoriedad de las respuestas generadas por el modelo (en este caso, 0.7).
-6. MaxTokens: Define la cantidad máxima de tokens que se permiten en la respuesta (en este caso, 256).
-7. PromptUser: Cadena de texto que indica que es turno del usuario para preguntar algo. Representado como '\n Usuario-'.
-8. PromptIA: Cadena de texto que indica que es turno de la IA para responder. Representado como '\n IA-'.
-9. Prompt: Cadena de texto para situar al modelo de IA en el contexto de un chat para ayudar a un usuario en sus tareas dentro de la plataforma Salesforce.
+La clase MKT_ChatGPT_Constants es una clase que contiene constantes utilizadas para interactuar con la API de OpenAI. Estas constantes incluyen la URL de la API, el tipo de contenido, el token de autenticación, el modelo utilizado, la temperatura, la cantidad máxima de tokens y los mensajes de solicitud del usuario y la IA. Además, se obtiene el token de autenticación de la clase personalizada MKT_ChatGPT_Config__c.

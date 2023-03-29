@@ -98,7 +98,7 @@ map_code_class = {}
 gpt = GPTConnector(modelo)
 sf = SalesforceConnector(class_name)  
 max_level = 3
-is_mock = {'generate_mock': True, 'use_mock': True, 'error_mock': True}
+is_mock = {'generate_mock': False, 'use_mock': False, 'error_mock': False}
 retry = {'retry_compilation': 3, 'retry_run': 3}
         
 if __name__ == '__main__':

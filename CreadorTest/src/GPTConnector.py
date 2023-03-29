@@ -13,7 +13,7 @@ class GPTConnector():
         self.modelo = modelo
         
     def _chat_gpt(self,messages):
-        return openai.ChatCompletion.create(model=self.modelo, messages=messages).choices[0].message.content
+        return openai.ChatCompletion.create(model=self.modelo, messages=messages,temperature=0.2).choices[0].message.content
         
     def save_message(self,role, message):
         self.messages.append({"role": role, "content": message})
