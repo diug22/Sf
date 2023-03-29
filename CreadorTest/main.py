@@ -9,6 +9,9 @@ def _retry_with_error(error, retry_type):
         code = Utilities.read_file(f"../force-app/main/default/classes/TestWithOutErrors.cls")
     else:
         code = Utilities.extract_code(gpt.prompt_apex_test_with_error(error, retry_type))
+    while 'STOP' in code:
+        response_user = input(code)
+        code = Utilities.extract_code(gpt.prompt_response_user(response_user))
     if retry_type == 'compilar':
         push_salesforce(code)
     if retry_type == 'ejecutar':
@@ -92,8 +95,8 @@ map_code_class = {}
 gpt = GPTConnector(modelo)
 sf = SalesforceConnector(class_name)  
 max_level = 3
-is_mock = {'generate_mock': True, 'use_mock': True, 'error_mock': True}
-retry = {'retry_compilation': 3, 'retry_run': 3}
+is_mock = {'generate_mock': True, 'use_mock': True, 'error_mock': False}
+retry = {'retry_compilation': 3, 'retry_run': 1}
         
 if __name__ == '__main__':
     read_prompt()

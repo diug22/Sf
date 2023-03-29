@@ -1,5 +1,13 @@
 MKT_ChatGPT_Constants
-
 -----
+La clase MKT_ChatGPT_Wrapper contiene dos clases internas, BodyToChat y ResponseChat. 
 
-La clase MKT_ChatGPT_Wrapper contiene dos clases internas: BodyToChat y ResponseChat. La clase BodyToChat es responsable de construir el cuerpo de la solicitud de chat a partir de un mensaje entrante y la clase ResponseChat se utiliza para capturar la respuesta del chat en una lista de objetos Text. La clase BodyToChat utiliza constantes de la clase MKT_ChatGPT_Constants para establecer los valores predeterminados en sus propiedades como model, temperature y max_tokens. Además, la clase BodyToChat tiene un método getBody() que devuelve una representación serializada en JSON del objeto BodyToChat.
+La clase BodyToChat tiene las siguientes propiedades:
+- model (cadena): Indica el modelo de la API de ChatGPT. El valor predeterminado se obtiene de la clase MKT_ChatGPT_Constants.
+- prompt (cadena): Contiene el valor pasado como entrada a la API de ChatGPT.
+- temperature (Decimal): Controla la aleatoriedad de la respuesta generada por la API de ChatGPT. El valor predeterminado se obtiene de la clase MKT_ChatGPT_Constants.
+- max_tokens (entero): Limita la longitud máxima de la respuesta generada por la API de ChatGPT. El valor predeterminado se obtiene de la clase MKT_ChatGPT_Constants.
+
+El método getBody de la clase BodyToChat devuelve la representación JSON del objeto actual.
+
+La clase ResponseChat tiene una propiedad choices que es una lista de objetos Text. Cada objeto Text contiene un único campo llamado text (cadena), que representa un texto generado por la API de ChatGPT.

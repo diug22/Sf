@@ -47,5 +47,9 @@ class GPTConnector():
         prompt = f"Hemos encontrado los siguientes errores al {type_error} el test: {errores}. \n" 
         return self.save_conversation(prompt)
     
+    def prompt_response_user(self, prompt):
+        return self.save_conversation(prompt)
+    
+    
   
    

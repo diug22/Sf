@@ -1,3 +1,16 @@
-MKT_ChatGPT_Config__c-Chat_GPT_Config__cs
+Listo
 -----
-Nivel 1: La clase MKT_ChatGPT_Constants es una clase pública que almacena constantes utilizadas para interactuar con la API de OpenAI. Contiene valores predeterminados como URL de API, el tipo de contenido, el token de autenticación de una configuración personalizada (Chat_GPT_Config__c), el modelo que se utilizará (text-davinci-003), el valor de temperatura (0.7) y el número máximo de tokens a generar (256). Además, incluye valores constantes de cadena para ayudar a la IA a interactuar como si estuviera en un chat con un usuario en la plataforma Salesforce. Estas constantes son PromptUser, PromptIA y Prompt.
+Resumen exhaustivo de la clase MKT_ChatGPT_Constants:
+
+La clase MKT_ChatGPT_Constants es una clase que almacena constantes para interactuar con el servicio de Chat IA de OpenAI. Se utiliza para almacenar URLs, tokens de autorización, nombres de modelos de IA y otras configuraciones requeridas para la interacción con la API de OpenAI.
+
+Las constantes incluidas son:
+- API: la URL de la API de OpenAI, que es 'https://api.openai.com/v1/completions'.
+- ContentType: el tipo de contenido que se enviará a la API, que en este caso es 'application/json'.
+- AuthToken: el token de autenticación necesario para acceder a la API. Se obtiene de un registro personalizado llamado Chat_GPT_Config__c.
+- Model: el modelo de IA de OpenAI que se utilizará, que en este caso es 'text-davinci-003'.
+- Temperature: un decimal que controla la 'creatividad' del modelo IA. Ajustado a 0.7.
+- MaxTokens: la cantidad máxima de tokens (palabras o fragmentos de palabras) que la IA puede generar en una respuesta, establecida en 256.
+- PromptUser: una constante de cadena que identifica el inicio de un mensaje enviado por el usuario. Es '\n Usuario-'.
+- PromptIA: una constante de cadena que identifica el inicio de un mensaje enviado por la IA. Es '\n IA-'.
+- Prompt: una descripción del contexto en el que se encuentra el usuario, en este caso un chat de IA en Salesforce.

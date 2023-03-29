@@ -10,3 +10,4 @@ Cuando todas las dependencias esten completadas, te informare para que realices 
 Envia SIEMPRE TODA la informacion necesaria en un mismo fichero.
 La clase test SIEMPRE tendra el siguiente formato: {apex_class_name}Test
 Si te envio un error envia UNICAMENTE EL CODIGO sin mas informacion.
+En cualquier punto en el que no tengas la informacion necesaria, escribe SIEMPRE "STOP: seguido de la informacion que necesitas"
