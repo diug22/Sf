@@ -4,9 +4,12 @@ from src.Utilities import Utilities
 
 def _retry_with_error(error, retry_type):
     print(f"Error: {error} - Retry type: {retry_type}")
+    is_break = input('Do you want to break? (y/n)')
+    if is_break == 'y':
+        quit()
     print(f"Creating new version...")
     if is_mock['error_mock']:
-        code = Utilities.read_file(f"../force-app/main/default/classes/TestWithOutErrors.cls")
+        code = Utilities.read_file(f"../force-app/main/default/classes/{class_name}Test.cls")
     else:
         code = Utilities.extract_code(gpt.prompt_apex_test_with_error(error, retry_type))
     while 'STOP' in code:
@@ -95,8 +98,8 @@ map_code_class = {}
 gpt = GPTConnector(modelo)
 sf = SalesforceConnector(class_name)  
 max_level = 3
-is_mock = {'generate_mock': True, 'use_mock': True, 'error_mock': False}
-retry = {'retry_compilation': 3, 'retry_run': 1}
+is_mock = {'generate_mock': True, 'use_mock': True, 'error_mock': True}
+retry = {'retry_compilation': 3, 'retry_run': 3}
         
 if __name__ == '__main__':
     read_prompt()
@@ -104,4 +107,3 @@ if __name__ == '__main__':
     code = generate_test_code()
     push_salesforce(code)
     run_test()
-    print(gpt.messages)

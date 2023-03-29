@@ -1,16 +1,13 @@
 Listo
 -----
-Resumen exhaustivo de la clase MKT_ChatGPT_Constants:
+La clase MKT_ChatGPT_Constants es una clase que contiene constantes utilizadas en otros procesos, probablemente en la comunicación con un API externo (OpenAI's GPT-3). Las constantes son:
 
-La clase MKT_ChatGPT_Constants es una clase que almacena constantes para interactuar con el servicio de Chat IA de OpenAI. Se utiliza para almacenar URLs, tokens de autorización, nombres de modelos de IA y otras configuraciones requeridas para la interacción con la API de OpenAI.
-
-Las constantes incluidas son:
-- API: la URL de la API de OpenAI, que es 'https://api.openai.com/v1/completions'.
-- ContentType: el tipo de contenido que se enviará a la API, que en este caso es 'application/json'.
-- AuthToken: el token de autenticación necesario para acceder a la API. Se obtiene de un registro personalizado llamado Chat_GPT_Config__c.
-- Model: el modelo de IA de OpenAI que se utilizará, que en este caso es 'text-davinci-003'.
-- Temperature: un decimal que controla la 'creatividad' del modelo IA. Ajustado a 0.7.
-- MaxTokens: la cantidad máxima de tokens (palabras o fragmentos de palabras) que la IA puede generar en una respuesta, establecida en 256.
-- PromptUser: una constante de cadena que identifica el inicio de un mensaje enviado por el usuario. Es '\n Usuario-'.
-- PromptIA: una constante de cadena que identifica el inicio de un mensaje enviado por la IA. Es '\n IA-'.
-- Prompt: una descripción del contexto en el que se encuentra el usuario, en este caso un chat de IA en Salesforce.
+1. API: Indica la URL del endpoint al cual se realizarán las llamadas.
+2. ContentType: Representa el tipo de dato representado como 'application/json'.
+3. AuthToken: Obtiene el token de autorización desde la configuración personalizada Chat_GPT_Config__c.
+4. Model: El modelo de GPT-3 utilizado, en este caso 'text-davinci-003'.
+5. Temperature: Controla la aleatoriedad de las respuestas generadas por el modelo (en este caso, 0.7).
+6. MaxTokens: Define la cantidad máxima de tokens que se permiten en la respuesta (en este caso, 256).
+7. PromptUser: Cadena de texto que indica que es turno del usuario para preguntar algo. Representado como '\n Usuario-'.
+8. PromptIA: Cadena de texto que indica que es turno de la IA para responder. Representado como '\n IA-'.
+9. Prompt: Cadena de texto para situar al modelo de IA en el contexto de un chat para ayudar a un usuario en sus tareas dentro de la plataforma Salesforce.

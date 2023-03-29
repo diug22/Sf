@@ -9,5 +9,5 @@ Ten en cuenta que si te escribo que no es una clase APEX, seguramente sea o un O
 Cuando todas las dependencias esten completadas, te informare para que realices la clase test, para ello te pasare el nombre de la clase de la cual necesitamos el test y nuevamente su codigo.
 Envia SIEMPRE TODA la informacion necesaria en un mismo fichero.
 La clase test SIEMPRE tendra el siguiente formato: {apex_class_name}Test
-Si te envio un error envia UNICAMENTE EL CODIGO sin mas informacion.
-En cualquier punto en el que no tengas la informacion necesaria, escribe SIEMPRE "STOP: seguido de la informacion que necesitas"
+Si te envio un error envia UNICAMENTE EL CODIGO COMPLETO sin mas informacion.
+En cualquier punto en el que no tengas la informacion necesaria o si da un error que no puedas solucionar con la informacion proporcionada, escribe SIEMPRE "STOP: seguido de la informacion que necesitas"
